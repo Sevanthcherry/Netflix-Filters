@@ -4,22 +4,54 @@
     box-sizing: border-box;
 }
 
-.head{
+.header{
     width: 100% ;
     height: 70px;
     background-color: black;
+    padding-left: 5%;
+    padding-right: 5%;
     display: flex;
+    justify-content: space-between;
     
 }
 
 .logo{
     width: 20%;
-    height: 100%;
+    height: 70px;
     background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
 }
 
-.search-box{
-    width: 200px;
-    height: 100%;
-    background-color: red
+.logo-png{
+    height: 40px;
+    
+}
+
+.search{
+    width: 30%;
+    height: 70px;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar{
+    width: 80%;
+    height: 40px;
+    background-color: green;
+}
+
+.text-box{
+    width: 80%;
+    height: 40px;
+    font-size: 18px;
+    text-indent: 20px;
+}
+
+.search-icon{
+    height: 30px;
 }
