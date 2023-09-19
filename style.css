@@ -18,7 +18,7 @@
 .logo{
     width: 20%;
     height: 70px;
-    background-color: yellow;
+    /* background-color: yellow; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,7 +33,7 @@
 .search{
     width: 30%;
     height: 70px;
-    background-color: blue;
+    /* background-color: blue; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,7 +42,12 @@
 .search-bar{
     width: 80%;
     height: 40px;
-    background-color: green;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .text-box{
@@ -50,8 +55,10 @@
     height: 40px;
     font-size: 18px;
     text-indent: 20px;
+    border: none;
+    outline: none;
 }
 
 .search-icon{
-    height: 30px;
+    height: 20px;
 }
