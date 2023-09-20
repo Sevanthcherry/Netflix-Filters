@@ -7,13 +7,13 @@ let movies = [
     },
     
     {
-        name:"Baahubali 1",
+        name:"Bahubali 1",
         poster: "https://pics.filmaffinity.com/Baahubali_The_Beginning-989063887-large.jpg",
         rating: 9.5
     },
 
     {
-        name:"Baahubali 2",
+        name:"Bahubali 2",
         poster: "https://rukminim1.flixcart.com/image/850/1000/kzygpzk0/poster/r/q/s/large-movie-bahubali-2-posters-on-large-print-36x24-inches-original-imagbukjsjtksjsg.jpeg?q=20",
         rating: 9.7
     },
@@ -76,6 +76,12 @@ let movies = [
         name: "Vikram",
         poster: "https://feeds.abplive.com/onecms/images/uploaded-images/2021/07/10/273e787ba809e725948334340c658e68_original.jpg",
         rating: 8.8
+    },
+
+    {
+        name: "John Wick",
+        poster: "https://www.themoviedb.org/t/p/w220_and_h330_face/fZPSd91yGE9fCcCe6OoQr6E3Bev.jpg",
+        rating: 8.4
     }
 
 
@@ -95,7 +101,11 @@ function searchMovie()
                 return movie.name.toUpperCase().includes(movieName.toUpperCase())
             })
 
-            console.log(result);
+            displayMovies(result);
+    }
+    else
+    {
+        displayMovies(movies);
     }
 }
 
@@ -120,14 +130,14 @@ function displayMovies(data)
             </div>
 
                 <div class="details">
-                    <h1>${movies[i].name}</h1>
-                    <h2>IMDB : ${movies[i].rating}</h2>
+                    <h1>${data[i].name}</h1>
+                    <h2>IMDB : ${data[i].rating}</h2>
                     <p>Anthony Ilott . Aqueela Zoll . Chris Jarvis </p>
                 </div>
 
             </div>
 
-        <img class="poster" src="${movies[i].poster}" alt="Wrong turn poster">
+        <img class="poster" src="${data[i].poster}" alt="Wrong turn poster">
     </div>         
         `
     }
