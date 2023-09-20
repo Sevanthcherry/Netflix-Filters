@@ -89,3 +89,50 @@ function searchMovie()
     let movieName = document.getElementById('search').value;
     console.log(movieName);
 }
+
+
+function displayMovies()
+{
+    let htmlString = ``;
+
+    for(i=0;i<movies.length;i++)
+    {
+        htmlString = htmlString +`
+        
+        <div class="movie">
+        <div class="overlay">
+
+            <div class="video">
+
+            </div>
+
+                <div class="details">
+                    <h1>${movies[i].name}</h1>
+                    <h2>IMDB : ${movies[i].rating}</h2>
+                    <p>Anthony Ilott . Aqueela Zoll . Chris Jarvis </p>
+                </div>
+
+            </div>
+
+        <img class="poster" src="${movies[i].poster}" alt="Wrong turn poster">
+    </div>         
+        `
+    }
+
+
+    console.log(htmlString);
+    document.getElementById("movies").innerHTML=htmlString;
+}
+
+displayMovies();
+
+
+// let movieDIV = document.createElement("div");
+//     movieDIV.classList.add("movie");
+
+//     let overlayDIV = document.createElement("div");
+//     overlayDIV.classList.add("overlay");
+
+//     movieDIV.appendChild(overlayDIV);
+
+//     console.log(movieDIV);
