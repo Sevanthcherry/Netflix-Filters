@@ -77,13 +77,14 @@
     background-color: lightgrey;
     display: flex;
     flex-wrap: wrap;
-    column-gap: 6%;
+    column-gap: 6.66%;
+    row-gap: 25px;
 }
 
 .movie{
     width: 20%;
     height: 500px;
-    background-color: red;
+    /* background-color: red; */
     overflow: hidden;
     border-radius: 10px;
     position: relative;

@@ -87,15 +87,28 @@ let movies = [
 function searchMovie()
 {
     let movieName = document.getElementById('search').value;
-    console.log(movieName);
+    
+    if(movieName!=="")
+    {
+        let result = movies.filter(function(movie)
+            {
+                return movie.name.toUpperCase().includes(movieName.toUpperCase())
+            })
+
+            console.log(result);
+    }
 }
 
 
-function displayMovies()
+function displayMovies(data)
 {
+
+
+    document.getElementById("movies").innerHTML="";
+
     let htmlString = ``;
 
-    for(i=0;i<movies.length;i++)
+    for(i=0;i<data.length;i++)
     {
         htmlString = htmlString +`
         
@@ -124,7 +137,7 @@ function displayMovies()
     document.getElementById("movies").innerHTML=htmlString;
 }
 
-displayMovies();
+displayMovies(movies);
 
 
 // let movieDIV = document.createElement("div");
